@@ -1,0 +1,1 @@
+INSERT INTO `clientes` (`id_cliente`, `nome`, `cpf`, `nascimento`, `email`, `senha`, `ativo`, `criado_em`, `atualizado_em`, `desativado_em`) VALUES (1, 'Willian', '38971015802', '1990-11-17', 'willian@mail.com', '10470c3b4b1fed12c3baac014be15fac67c6e815', 1, '2018-4-5 15:33:39', '2018-4-5 15:33:42', NULL);

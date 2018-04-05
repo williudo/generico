@@ -1,0 +1,13 @@
+#DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    #RewriteRule ^(.*)$ index.php?url=$1
+    RewriteRule ^entrar?$ /views/entrar.php [NC]
+    RewriteRule ^registrar?$ /views/registrar.php [NC]
+    RewriteRule ^admin?$ /views/admin.php [NC]
+    RewriteRule ^dashboard?$ /views/dashboard.php [NC]
+    RewriteRule ^admin/dashboard?$ /views/admin/dashboard.php [NC]
+</IfModule>
