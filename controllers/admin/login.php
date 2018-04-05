@@ -9,8 +9,8 @@ if(isset($_POST['email']) and isset($_POST['senha'])){
 
 	if (empty($email) || empty($senha))
 	{
-		echo "Informe email e senha";
-		exit;
+		$_SESSION['erros'][] = ['titulo' => "Erro!", 'mensagem' => "Prencha email e senha"];
+		direciona('/entrar');
 	}
 
 	// cria o hash da senha
@@ -29,8 +29,8 @@ if(isset($_POST['email']) and isset($_POST['senha'])){
 
 	if (count($users) <= 0)
 	{
-		echo "Email ou senha incorretos";
-		exit;
+		$_SESSION['erros'][] = ['titulo' => "Erro!", 'mensagem' => "Dados informados são inválidos"];
+		direciona('/entrar');
 	}
 
 	// pega o primeiro usuário

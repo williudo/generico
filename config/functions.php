@@ -44,4 +44,23 @@ function direciona($vai, $prefixo = '') {
 	exit;
 }
 
+
+function retornaErro($titulo, $mensagem)
+{
+	return '<div class="alert alert-danger" role="alert"><b>'.$titulo.'</b><br>'.$mensagem.'</div>';
+}
+
+function retornaErros($erros)
+{	
+	$retorno = '<div class="alert alert-danger" role="alert">';
+	foreach($erros as $err)
+	{
+		
+		$retorno .= '<b>'.$err['titulo'].'</b><br>'.$err['mensagem'].'<br>';
+	}
+	$retorno .= '</div>';
+
+	return $retorno;
+}
+
 ?>
